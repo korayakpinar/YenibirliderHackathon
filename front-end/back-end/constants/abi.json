@@ -1,0 +1,1725 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_ourToken",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Approval",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "claimRewards",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "subtractedValue",
+				"type": "uint256"
+			}
+		],
+		"name": "decreaseAllowance",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_header",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_ipfsaddress",
+				"type": "string"
+			},
+			{
+				"internalType": "enum Dessay.Topics[]",
+				"name": "_topicsInput",
+				"type": "uint8[]"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_badgeThreshold",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "count",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "collectionName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "collectionDesc",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "collectionPp",
+				"type": "string"
+			}
+		],
+		"name": "enterWriting",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_addr",
+				"type": "address"
+			}
+		],
+		"name": "follow",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "Init",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "addedValue",
+				"type": "uint256"
+			}
+		],
+		"name": "increaseAllowance",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "follower",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "followed",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "targetFollowerCount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "tstamp",
+				"type": "uint256"
+			}
+		],
+		"name": "PersonFollowed",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_publisher",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "content",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "reply",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "publisher",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "content",
+				"type": "string"
+			}
+		],
+		"name": "ReplyAdded",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "notifType",
+				"type": "uint8"
+			},
+			{
+				"internalType": "address",
+				"name": "receiver",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "sendNotif",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "hisTopics",
+				"type": "uint256[]"
+			}
+		],
+		"name": "setTopicsForAddress",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "stakeToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transfer",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "unstakeToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_bio",
+				"type": "string"
+			}
+		],
+		"name": "updateBio",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "bio",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "tstamp",
+				"type": "uint256"
+			}
+		],
+		"name": "UpdatedBio",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "tstamp",
+				"type": "uint256"
+			}
+		],
+		"name": "UpdatedName",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "data",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "tstamp",
+				"type": "uint256"
+			}
+		],
+		"name": "UpdatedPp",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			}
+		],
+		"name": "updateName",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_pp",
+				"type": "string"
+			}
+		],
+		"name": "updatePp",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "writingId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "percentage",
+				"type": "uint256"
+			}
+		],
+		"name": "upvote",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "voter",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "receiver",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "writingID",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "tstamp",
+				"type": "uint256"
+			}
+		],
+		"name": "Upvoted",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "publisher",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "warnType",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "desc",
+				"type": "string"
+			}
+		],
+		"name": "warnWriting",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "header",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "ipfsaddr",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "publisher",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "enum Dessay.Topics[]",
+				"name": "topics",
+				"type": "uint8[]"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "tstamp",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "WritingEntered",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			}
+		],
+		"name": "allowance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "calcRewards",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "userRewards",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "writerRewards",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"internalType": "uint8",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getBadgeExplore",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "creator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collectionID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "kalan",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "collectionName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "collectionDesc",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "collectionPp",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "owners",
+						"type": "address[]"
+					}
+				],
+				"internalType": "struct Dessay.Collection[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getBadgeFromId",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "creator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collectionID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "kalan",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "collectionName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "collectionDesc",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "collectionPp",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "owners",
+						"type": "address[]"
+					}
+				],
+				"internalType": "struct Dessay.Collection",
+				"name": "badge",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getComments",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "publisher",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"internalType": "struct Dessay.Comment[]",
+				"name": "comments",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getFeed",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "header",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipfsaddress",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Dessay.Topics[]",
+						"name": "topics",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "address",
+						"name": "publisher",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "comments",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tstamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "replyCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "warnCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "badgeThreshold",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Dessay.Writing[]",
+				"name": "cards",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getFeedFromInfura",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "header",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipfsaddress",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Dessay.Topics[]",
+						"name": "topics",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "address",
+						"name": "publisher",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "comments",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tstamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "replyCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "warnCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "badgeThreshold",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Dessay.Writing[]",
+				"name": "cards",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getNotif",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "enum Dessay.NotifType",
+						"name": "notifType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Dessay.Notif[]",
+				"name": "notifs",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getOwnedBadges",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "creator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collectionID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "kalan",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "collectionName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "collectionDesc",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "collectionPp",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "owners",
+						"type": "address[]"
+					}
+				],
+				"internalType": "struct Dessay.Collection[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_addr",
+				"type": "address"
+			}
+		],
+		"name": "getProfile",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "Pp",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "Name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "Biography",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "Followers",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "Followed",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "Writings",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Dessay.Profile",
+				"name": "profile",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "getStakedBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "getStakeTime",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_addr",
+				"type": "address"
+			}
+		],
+		"name": "getTopicsForAddress",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "topics",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "getUserPower",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "getWrites",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "header",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipfsaddress",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Dessay.Topics[]",
+						"name": "topics",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "address",
+						"name": "publisher",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "comments",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tstamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "replyCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "warnCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "badgeThreshold",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Dessay.Writing[]",
+				"name": "hisWriting",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getWritingForID",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "header",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipfsaddress",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Dessay.Topics[]",
+						"name": "topics",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "address",
+						"name": "publisher",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "comments",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tstamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "replyCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "warnCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "badgeThreshold",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Dessay.Writing",
+				"name": "writing",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_addr",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getWritingForIndex",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "header",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipfsaddress",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Dessay.Topics[]",
+						"name": "topics",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "address",
+						"name": "publisher",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "comments",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tstamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "replyCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "warnCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "badgeThreshold",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Dessay.Writing",
+				"name": "writing",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "enum Dessay.Topics",
+				"name": "_topic",
+				"type": "uint8"
+			}
+		],
+		"name": "getWritingsForTopic",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "header",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipfsaddress",
+						"type": "string"
+					},
+					{
+						"internalType": "enum Dessay.Topics[]",
+						"name": "topics",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "address",
+						"name": "publisher",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "comments",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tstamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "upvoteCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "replyCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "warnCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "badgeThreshold",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Dessay.Writing[]",
+				"name": "writings",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "isStaked",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "ourToken",
+		"outputs": [
+			{
+				"internalType": "contract DessayToken",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "stakedBalances",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "stakeTimes",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "userPowers",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
